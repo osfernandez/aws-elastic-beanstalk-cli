@@ -90,7 +90,7 @@ def ssh_into_instance(instance_id, keep_open=False, force_open=False, custom_ssh
     except KeyError:
         raise NoKeypairError()
     try:
-        ip = instance['PublicIpAddress']
+        ip = instance['PrivateIpAddress']
     except KeyError:
         if 'PrivateIpAddress' in instance:
             ip = instance['PrivateIpAddress']
