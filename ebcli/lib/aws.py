@@ -39,7 +39,7 @@ BOTOCORE_DATA_FOLDER_NAME = 'botocoredata'
 
 _api_clients = {}
 _profile = None
-_profile_env_var = 'AWS_EB_PROFILE'
+_profile_env_var = 'AWS_PROFILE'
 _id = None
 _key = None
 _region_name = None
@@ -168,7 +168,6 @@ def _get_botocore_session():
             'profile': (None, _profile_env_var, _profile, None),
         })
         session.set_config_variable('region', _region_name)
-        session.set_config_variable('profile', _profile)
         session.register_component('data_loader', _get_data_loader())
         _set_user_agent_for_session(session)
         _get_botocore_session.botocore_session = session
