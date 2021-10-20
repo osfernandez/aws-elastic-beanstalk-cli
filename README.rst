@@ -6,6 +6,7 @@ TMP Changes
 ===========
 
 This fork has been altered in a couple ways:
+
 - Forces connection via private IP address
 - Uses the standard `AWS_PROFILE` environment variable
 - Doesn't require the `--profile` flag but instead uses `AWS_PROFILE` appropriately (fixes a bug)
