@@ -2,6 +2,14 @@
 EB CLI
 ======
 
+TMP Changes
+===========
+
+This fork has been altered in a couple ways:
+- Forces connection via private IP address
+- Uses the standard `AWS_PROFILE` environment variable
+- Doesn't require the `--profile` flag but instead uses `AWS_PROFILE` appropriately (fixes a bug)
+
 Introduction
 ============
 
@@ -26,7 +34,7 @@ If you'd like to use the EB CLI
 The easiest and recommended way to install the EB CLI is to use the EB CLI setup scripts available on a separate GitHub repository.
 Use the scripts to install the EB CLI on Linux, macOS, or Windows. The scripts install the EB CLI and its dependencies, including Python and pip.
 The scripts also create a virtual environment for the EB CLI.
-For installation instructions, see the `aws/aws-elastic-beanstalk-cli-setup <https://github.com/aws/aws-elastic-beanstalk-cli-setup>`__ repository. 
+For installation instructions, see the `aws/aws-elastic-beanstalk-cli-setup <https://github.com/aws/aws-elastic-beanstalk-cli-setup>`__ repository.
 
 -----------------------------------------
 If you'd like to contribute to the EB CLI
@@ -52,7 +60,7 @@ To install the EB CLI
 2. Navigate to the the root of the repository.
 
 3. Run the following command.
-   
+
    `pip install .`:code:
 
 Getting Started
